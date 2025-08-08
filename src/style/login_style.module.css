@@ -1,0 +1,72 @@
+  .wrapper {
+    position: relative;
+  }
+  
+  .wrapper .form-container {
+    position: absolute;
+  }
+  
+  .wrapper .form-container form .form-group {
+    position: relative;
+  }
+  
+  .wrapper .sign-up {
+    transform: rotate(7deg);
+  }
+  
+  /* Login card animates out */
+  .animated-signin {
+    animation: signin-flip 1s ease-in-out forwards;
+  }
+  
+  @keyframes signin-flip {
+    0% {
+      transform: translateX(0);
+    }
+  
+    50% {
+      transform: translateX(-50rem) scale(1.1);
+    }
+  
+    100% {
+      transform: translateX(0) rotate(7deg) scale(1);
+      z-index: 0;
+    }
+  }
+  
+  /* Sign-up card rotates into front */
+  .animated-signup {
+    animation: rotatecard 0.7s ease-in-out forwards;
+  }
+  
+  @keyframes rotatecard {
+    0% {
+      transform: rotate(7deg);
+    }
+  
+    100% {
+      transform: rotate(0);
+      z-index: 1;
+    }
+  }
+  
+  /* Sign-up card animates out (when clicking Sign In) */
+  .animated-signup-back {
+    animation: signup-flip 1s ease-in-out forwards;
+  }
+  
+  @keyframes signup-flip {
+    0% {
+      transform: rotate(0) translateX(0);
+    }
+  
+    50% {
+      transform: translateX(-50rem) scale(1.1);
+    }
+  
+    100% {
+      transform: rotate(7deg) translateX(0) scale(1);
+      z-index: 0;
+    }
+  }
+  
