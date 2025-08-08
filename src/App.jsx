@@ -10,7 +10,7 @@ function App() {
       element: <Navigate to="/login" replace />
     },
     {
-      path: "/Bakery-Website",
+      path: "/login",
       element: <Login />
     },
     {
