@@ -5,10 +5,10 @@ import Admin from "./Pages/admin_page/admin"
 
 function App() {
   const router = createBrowserRouter([
-    // {
-    //   path: "/",
-    //   element: <Navigate to="/login" replace />
-    // },
+    {
+      path: "/",
+      element: <Navigate to="/login" replace />
+    },
     {
       path: "/Bakery-Website",
       element: <Login />
