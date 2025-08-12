@@ -122,7 +122,7 @@ export default function Login() {
         setIsLogedIn(loginData.email)
         localStorage.setItem("isLogedIn", JSON.stringify(loginData.email))
 
-        navigate('/')
+        navigate('/home')
 
         setLoginMsg(true)
         setTimeout(() => {

@@ -41,7 +41,7 @@ export default function Admin() {
         });
       }
     } else {
-      navigate('/login');
+      navigate('/');
     }
   }, [user]);
 
@@ -64,7 +64,7 @@ export default function Admin() {
   const handleLogout = (e) => {
     e.preventDefault();
     localStorage.setItem("isLogedIn", null);
-    navigate("/login");
+    navigate("/");
   };
 
   return (
@@ -77,7 +77,7 @@ export default function Admin() {
         {/* Sidebar */}
         <div className="bg-[#191C20] w-full md:w-[280px] h-full flex flex-col p-4">
           <Link
-            to={"/"}
+            to={"/home"}
             className="text-white flex items-center mb-4 gap-2"
           >
             <FaArrowLeft /> <FaHome className="text-xl" />

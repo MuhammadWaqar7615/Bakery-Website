@@ -21,7 +21,7 @@ export default function Home() {
 
   useEffect(() => {
     if (!isLogedIn) {
-      navigate('/login');
+      navigate('/');
     } else {
       dispatch(setCurrentEmail(isLogedIn));
       dispatch(updateUser({ email: isLogedIn, updates: {} }));
@@ -108,7 +108,7 @@ export default function Home() {
       {/* Cards */}
       <section className='my-20 px-0'>
         <h1 className='text-4xl md:text-5xl font-bold text-center my-10' style={{ color: primaryColor }}>Explore More</h1>
-        <div className="flex md:flex-wrap flex-nowrap overflow-x-auto px-4 gap-4 md:gap-6 scroll-smooth snap-x snap-mandatory md:justify-center">
+        <div className="flex md:flex-wrap flex-nowrap overflow-x-auto p-4 gap-4 md:gap-6 scroll-smooth snap-x snap-mandatory md:justify-center">
 
           {cardArr[0] && (
             <div className='w-[260px] md:w-[280px] h-[400px] rounded-lg bg-cover relative transition-transform duration-300 snap-center shrink-0 transform scale-95 md:scale-100 hover:scale-105' style={{ backgroundImage: `url(${explore1})` }}>
