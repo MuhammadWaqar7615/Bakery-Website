@@ -114,10 +114,9 @@ export default function Login() {
   const handleLoginSubmit = (event) => {
     event.preventDefault()
 
-
+    let found = false;
     
     for(let i = 0; i < userData.length; i++) {
-
       if(loginData.email==userData[i].email && loginData.password==userData[i].password) {
         setIsLogedIn(loginData.email)
         localStorage.setItem("isLogedIn", JSON.stringify(loginData.email))
@@ -128,10 +127,14 @@ export default function Login() {
         setTimeout(() => {
           setLoginMsg(false)
         }, 3000);
-      } else  {
-        alert('hey btn is not working')
-      }
-        
+        found = true;
+        break;
+      } 
+
+      
+    }
+    if(!found) {
+      alert("Invalid Email or Password!")
     }
   }
 
