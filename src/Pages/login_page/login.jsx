@@ -122,14 +122,14 @@ export default function Login() {
         setIsLogedIn(loginData.email)
         localStorage.setItem("isLogedIn", JSON.stringify(loginData.email))
 
-        navigate('/home')
+        navigate("/home")
 
         setLoginMsg(true)
         setTimeout(() => {
           setLoginMsg(false)
         }, 3000);
       } else  {
-
+        alert('hey btn is not working')
       }
         
     }
@@ -201,7 +201,7 @@ export default function Login() {
           <div className={`${styles['forgot-pass']}`}>
             <span className="text-[#933C24] hover:text-amber-950 transition duration-200">Forgot password?</span>
           </div>
-          <button type="submit" className="w-full bg-[#933C24] text-white py-2 rounded hover:bg-amber-950 transition duration-200" >
+          <button type="submit" className="w-full bg-[#933C24] cursor-pointer text-white py-2 rounded hover:bg-amber-950 transition duration-200" >
             Login
           </button>
           <div className={`${styles['link']}`}>
